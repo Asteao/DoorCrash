@@ -10,14 +10,14 @@
         public Transform WheelRLtrans;
         public Transform WheelRRtrans;
         public Vector3 eulertest;
-        float maxFwdSpeed = -3000;
-        float maxBwdSpeed = 1000f;
+        float maxFwdSpeed = -8000;
+        float maxBwdSpeed = 5000f;
         float gravity = 9.8f;
         private bool braked = false;
-        private float maxBrakeTorque = 500;
+        private float maxBrakeTorque = 5000;
         private Rigidbody rb;
         public Transform centreofmass;
-        private float maxTorque = 1000;
+        private float maxTorque = 3000;
         void Start () 
         {
             rb = GetComponent<Rigidbody>();
@@ -33,7 +33,7 @@
             }
             //speed of car, Car will move as you will provide the input to it.
        
-          WheelRR.motorTorque = maxTorque * Input.GetAxis("Vertical");
+            WheelRR.motorTorque = maxTorque * Input.GetAxis("Vertical");
             WheelRL.motorTorque = maxTorque * Input.GetAxis("Vertical");
           
             //changing car direction
