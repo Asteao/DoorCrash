@@ -10,13 +10,17 @@
         public Transform WheelRLtrans;
         public Transform WheelRRtrans;
         public Vector3 eulertest;
+        [SerializeField]
         float maxFwdSpeed = -8000;
+        [SerializeField]
         float maxBwdSpeed = 5000f;
         float gravity = 9.8f;
         private bool braked = false;
+        [SerializeField]
         private float maxBrakeTorque = 5000;
         private Rigidbody rb;
         public Transform centreofmass;
+        [SerializeField]
         private float maxTorque = 3000;
         void Start () 
         {
