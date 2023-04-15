@@ -192,9 +192,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1497162103}
     m_Modifications:
+    - target: {fileID: 1071491981225826, guid: 388d83314c9e51c40956fb6908979eee, type: 3}
+      propertyPath: m_Name
+      value: Body
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160819966182104, guid: 388d83314c9e51c40956fb6908979eee, type: 3}
+      propertyPath: m_Name
+      value: WheelBL
+      objectReference: {fileID: 0}
     - target: {fileID: 1646981259178978, guid: 388d83314c9e51c40956fb6908979eee, type: 3}
       propertyPath: m_Name
-      value: Car_2
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664593040851034, guid: 388d83314c9e51c40956fb6908979eee, type: 3}
+      propertyPath: m_Name
+      value: WheelBR
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720468467844398, guid: 388d83314c9e51c40956fb6908979eee, type: 3}
+      propertyPath: m_Name
+      value: WheelFR
+      objectReference: {fileID: 0}
+    - target: {fileID: 1995907943609020, guid: 388d83314c9e51c40956fb6908979eee, type: 3}
+      propertyPath: m_Name
+      value: WheelFL
       objectReference: {fileID: 0}
     - target: {fileID: 4870167790249810, guid: 388d83314c9e51c40956fb6908979eee, type: 3}
       propertyPath: m_RootOrder
@@ -400,6 +420,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 269b74e0a95399540b30f5eb3b602e78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpeed: 2
+  jumpHeight: 1
+  gravityValue: -9.81
 --- !u!1001 &545125986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1143,6 +1166,7 @@ GameObject:
   - component: {fileID: 1614345320}
   - component: {fileID: 1614345322}
   - component: {fileID: 1614345321}
+  - component: {fileID: 1614345323}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1216,6 +1240,23 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1614345323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614345319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 284627c42b5c1cb3686171dca2c5b57c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCamera: {fileID: 1614345322}
+  target: {fileID: 0}
+  smoothSpeed: 0.125
+  locationOffset: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0}
 --- !u!1001 &1616786633
 PrefabInstance:
   m_ObjectHideFlags: 0
