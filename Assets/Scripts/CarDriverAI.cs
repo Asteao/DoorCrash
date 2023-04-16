@@ -18,7 +18,7 @@ public class CarDriverAI : CarControls {
         float forwardAmount = 0f;
         float turnAmount = 0f;
 
-        float reachedTargetDistance = 15f;
+        float reachedTargetDistance = 2f;
         float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
         if (distanceToTarget > reachedTargetDistance) {
             // Still too far, keep going

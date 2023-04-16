@@ -73,45 +73,24 @@ public class CarControls : MonoBehaviour
     }
     protected void Update()
     {
-        HandBrake();
         if (Input.GetButtonDown("Fire1"))
         {
             tfc.ThrowFood(transform, rb.velocity);
         }
 
         //for tyre rotate
-        WheelFLtrans.Rotate(WheelFL.rpm / 60 * 360 * Time.deltaTime, 0, 0);
-        WheelFRtrans.Rotate(WheelFR.rpm / 60 * 360 * Time.deltaTime, 0, 0);
-        WheelRLtrans.Rotate(WheelRL.rpm / 60 * 360 * Time.deltaTime, 0, 0);
-        WheelRRtrans.Rotate(WheelRL.rpm / 60 * 360 * Time.deltaTime, 0, 0);
-        //changing tyre direction
-        Vector3 temp = WheelFLtrans.localEulerAngles;
-        Vector3 temp1 = WheelFRtrans.localEulerAngles;
-        temp.y = WheelFL.steerAngle - (WheelFLtrans.localEulerAngles.z);
-        WheelFLtrans.localEulerAngles = temp;
-        temp1.y = WheelFR.steerAngle - WheelFRtrans.localEulerAngles.z;
-        WheelFRtrans.localEulerAngles = temp1;
-        eulertest = WheelFLtrans.localEulerAngles;
-    }
-    void HandBrake()
-    {
-        //Debug.Log("brakes " + braked);
-        if (Input.GetButton("Jump"))
-        {
-            braked = true;
-        }
-        else
-        {
-            braked = false;
-        }
-        if (braked)
-        {
-
-            WheelRL.brakeTorque = maxBrakeTorque * 20;//0000;
-            WheelRR.brakeTorque = maxBrakeTorque * 20;//0000;
-            WheelRL.motorTorque = 0;
-            WheelRR.motorTorque = 0;
-        }
+        // WheelFLtrans.Rotate(WheelFL.rpm / 60 * 360 * Time.deltaTime, 0, 0);
+        // WheelFRtrans.Rotate(WheelFR.rpm / 60 * 360 * Time.deltaTime, 0, 0);
+        // WheelRLtrans.Rotate(WheelRL.rpm / 60 * 360 * Time.deltaTime, 0, 0);
+        // WheelRRtrans.Rotate(WheelRL.rpm / 60 * 360 * Time.deltaTime, 0, 0);
+        // //changing tyre direction
+        // Vector3 temp = WheelFLtrans.localEulerAngles;
+        // Vector3 temp1 = WheelFRtrans.localEulerAngles;
+        // temp.y = WheelFL.steerAngle - (WheelFLtrans.localEulerAngles.z);
+        // WheelFLtrans.localEulerAngles = temp;
+        // temp1.y = WheelFR.steerAngle - WheelFRtrans.localEulerAngles.z;
+        // WheelFRtrans.localEulerAngles = temp1;
+        // eulertest = WheelFLtrans.localEulerAngles;
     }
 
     public void SetInputs(float forwardAmount, float turnAmount)
