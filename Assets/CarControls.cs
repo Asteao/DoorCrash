@@ -5,10 +5,14 @@
         public WheelCollider WheelFR;
         public WheelCollider WheelRL;
         public WheelCollider WheelRR;
-        public Transform WheelFLtrans;
+
+    public ThrowFoodController tfc;
+
+    public Transform WheelFLtrans;
         public Transform WheelFRtrans;
         public Transform WheelRLtrans;
         public Transform WheelRRtrans;
+
         public Vector3 eulertest;
         [SerializeField]
         float maxFwdSpeed = -8000;
@@ -48,9 +52,13 @@
         void Update()
         {
             HandBrake();
-            
+        if (Input.GetButtonDown("Fire1"))
+        {
+            tfc.ThrowFood(transform, rb.velocity);
+        }
+
             //for tyre rotate
-            WheelFLtrans.Rotate(WheelFL.rpm/60*360*Time.deltaTime ,0,0);
+        WheelFLtrans.Rotate(WheelFL.rpm/60*360*Time.deltaTime ,0,0);
             WheelFRtrans.Rotate(WheelFR.rpm/60*360*Time.deltaTime ,0,0);
             WheelRLtrans.Rotate(WheelRL.rpm/60*360*Time.deltaTime ,0,0);
             WheelRRtrans.Rotate(WheelRL.rpm/60*360*Time.deltaTime ,0,0);
