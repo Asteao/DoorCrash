@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerCar: {fileID: 7278093143778062482, guid: b112f9188e0faf5b7a437ca68c48d296, type: 3}
-  EnemyCar: {fileID: 4565276085587758181, guid: 5da8073553b6c2a2f8665afc0a2251da, type: 3}
-  PlayerSpawnPoint: {fileID: 0}
-  EnemySpawnPoint: {fileID: 0}
+  PlayerSpawnPoints: []
+  EnemySpawnPoints: []
+  foodSpawnLocations: []
+  foodOrder: {fileID: 0}
+  newOrder: {fileID: 9035500227165350771, guid: fadecd2981c494c649a6df6a15bc2fec, type: 3}
