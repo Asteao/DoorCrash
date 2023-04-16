@@ -6,6 +6,8 @@ public class SpawnManager : MonoBehaviour
 {
 
     public GameObject PlayerCar;
+    public GameObject EnemyCar;
+
     [SerializeField] GameObject[] PlayerSpawnPoints;
     [SerializeField] GameObject[] EnemySpawnPoints;
 
@@ -48,7 +50,7 @@ public class SpawnManager : MonoBehaviour
         else  {
           
             int randomEnemyPoint = Random.Range(0, EnemySpawnPoints.Length);
-            GameObject EnemyPlayer = Instantiate(PlayerCar, EnemySpawnPoints[randomEnemyPoint].transform.position, Quaternion.identity);
+            GameObject EnemyPlayer = Instantiate(EnemyCar, EnemySpawnPoints[randomEnemyPoint].transform.position, Quaternion.identity);
             EnemyPlayer.name =  "enemy";
 
             return EnemyPlayer;
