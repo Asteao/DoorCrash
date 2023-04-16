@@ -199,7 +199,7 @@ MonoBehaviour:
   WheelFR: {fileID: 7279262636452508186}
   WheelRL: {fileID: 7279262634824286439}
   WheelRR: {fileID: 7279262635037848100}
-  tfc: {fileID: 0}
+  tfc: {fileID: 8619390435053609869, guid: bb23ba5284af7bc4886eb9e24f304a11, type: 3}
   WheelFLtrans: {fileID: 0}
   WheelFRtrans: {fileID: 0}
   WheelRLtrans: {fileID: 0}
