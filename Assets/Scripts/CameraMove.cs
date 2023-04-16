@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
-    public Transform target;
+    private Transform target;
     public float smoothSpeed = 0.3f;
     public Vector3 locationOffset;
     public Vector3 rotationOffset;
@@ -13,7 +13,7 @@ public class CameraMove : MonoBehaviour
     void Start()
     {
          locationOffset = new Vector3(0, 1.5f, -4);
-         target = GameObject.Find("Player").transform;
+         
     }
 
     // Update is called once per frame
@@ -25,6 +25,12 @@ public class CameraMove : MonoBehaviour
         Quaternion desiredRotation = target.rotation * Quaternion.Euler(rotationOffset);
         Quaternion smoothedRotation = Quaternion.Lerp(transform.rotation, desiredRotation, smoothSpeed);
         transform.rotation = smoothedRotation;
+    }
+
+    void Update(){
+
+     target = GameObject.Find("Player").transform;
+
     }
 
 }
