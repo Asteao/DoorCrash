@@ -6,7 +6,8 @@ public class SpawnManager : MonoBehaviour
 {
 
     public GameObject PlayerCar;
-    public GameObject PlayerSpawnPoint;
+    [SerializeField] GameObject[] PlayerSpawnPoints;
+    [SerializeField] GameObject[] EnemySpawnPoints;
 
     [SerializeField] GameObject[] foodSpawnLocations;
     public GameObject foodOrder;
@@ -37,7 +38,8 @@ public class SpawnManager : MonoBehaviour
         
         if (characterType == "player") {
           
-            GameObject ActivePlayer = Instantiate(PlayerCar, PlayerSpawnPoint.transform.position, Quaternion.identity);
+            int randomPlayerPoint = Random.Range(0, PlayerSpawnPoints.Length);
+            GameObject ActivePlayer = Instantiate(PlayerCar, PlayerSpawnPoints[randomPlayerPoint].transform.position, Quaternion.identity);
             ActivePlayer.name =  "Player";
 
             return ActivePlayer;
@@ -45,7 +47,8 @@ public class SpawnManager : MonoBehaviour
 
         else  {
           
-            GameObject EnemyPlayer = Instantiate(PlayerCar, PlayerSpawnPoint.transform.position, Quaternion.identity);
+            int randomEnemyPoint = Random.Range(0, EnemySpawnPoints.Length);
+            GameObject EnemyPlayer = Instantiate(PlayerCar, EnemySpawnPoint[randomEnemyPoint].transform.position, Quaternion.identity);
             EnemyPlayer.name =  "enemy";
 
             return EnemyPlayer;
