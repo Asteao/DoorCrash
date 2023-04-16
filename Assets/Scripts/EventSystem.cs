@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class EventSystem : MonoBehaviour
 {
-    public GameObject playerCar;
-    public GameObject playerCamera;
+    public SpawnManager spawnManager;
+   
+
     // Start is called before the first frame update
     void Start()
     {
-        GameObject Player = Instantiate(playerCar) as GameObject;
-        Player.name = "Player";
-        Instantiate(playerCamera);
+    spawnManager.SpawnVehicles("enemy");
+    spawnManager.SpawnVehicles("player");
         
     }
 
