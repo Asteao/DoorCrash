@@ -48,7 +48,7 @@ public class SpawnManager : MonoBehaviour
         else  {
           
             int randomEnemyPoint = Random.Range(0, EnemySpawnPoints.Length);
-            GameObject EnemyPlayer = Instantiate(PlayerCar, EnemySpawnPoint[randomEnemyPoint].transform.position, Quaternion.identity);
+            GameObject EnemyPlayer = Instantiate(PlayerCar, EnemySpawnPoints[randomEnemyPoint].transform.position, Quaternion.identity);
             EnemyPlayer.name =  "enemy";
 
             return EnemyPlayer;
