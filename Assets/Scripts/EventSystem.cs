@@ -9,7 +9,8 @@ public class EventSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(playerCar);
+        GameObject Player = Instantiate(playerCar) as GameObject;
+        Player.name = "Player";
         Instantiate(playerCamera);
         
     }
