@@ -30,6 +30,9 @@ public class SpawnManager : MonoBehaviour
     {
         
             Instantiate(newOrder, this.transform);
+            PlayerSpawnPoints = GameObject.FindGameObjectsWithTag("Player Spawn");
+            EnemySpawnPoints = GameObject.FindGameObjectsWithTag("Enemy Spawn");
+            foodSpawnLocations = GameObject.FindGameObjectsWithTag("FoodSpawnPoint");
     }
 
     // Update is called once per frame
