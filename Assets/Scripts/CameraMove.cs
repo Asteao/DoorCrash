@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
-    public GameObject player;
-    public Camera myCamera;
-
     public Transform target;
     public float smoothSpeed = 0.3f;
     public Vector3 locationOffset;
