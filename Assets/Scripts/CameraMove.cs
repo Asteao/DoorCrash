@@ -20,7 +20,7 @@ public class CameraMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update () {
+    void FixedUpdate () {
         Vector3 desiredPosition = target.position + target.rotation * locationOffset;
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
         transform.position = smoothedPosition;
