@@ -71,7 +71,7 @@ public class CarControls : MonoBehaviour
         WheelFL.steerAngle = 30 * turnAmount;
         WheelFR.steerAngle = 30 * turnAmount;
     }
-    void Update()
+    protected void Update()
     {
         HandBrake();
         if (Input.GetButtonDown("Fire1"))

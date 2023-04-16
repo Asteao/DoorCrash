@@ -2,18 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarDriverAI : MonoBehaviour {
+public class CarDriverAI : CarControls {
 
     [SerializeField] private Transform targetPositionTranform;
 
-    private CarDriver carDriver;
     private Vector3 targetPosition;
 
     private void Awake() {
-        carDriver = GetComponent<CarDriver>();
     }
 
     private void Update() {
+        base.Update();
         SetTargetPosition(targetPositionTranform.position);
 
         float forwardAmount = 0f;
@@ -32,7 +31,7 @@ public class CarDriverAI : MonoBehaviour {
 
                 float stoppingDistance = 30f;
                 float stoppingSpeed = 40f;
-                if (distanceToTarget < stoppingDistance && carDriver.GetSpeed() > stoppingSpeed) {
+                if (distanceToTarget < stoppingDistance && this.GetSpeed() > stoppingSpeed) {
                     // Within stopping distance and moving forward too fast
                     forwardAmount = -1f;
                 }
@@ -56,7 +55,7 @@ public class CarDriverAI : MonoBehaviour {
             }
         } else {
             // Reached target
-            if (carDriver.GetSpeed() > 15f) {
+            if (this.GetSpeed() > 15f) {
                 forwardAmount = -1f;
             } else {
                 forwardAmount = 0f;
@@ -64,7 +63,8 @@ public class CarDriverAI : MonoBehaviour {
             turnAmount = 0f;
         }
 
-        carDriver.SetInputs(forwardAmount, turnAmount);
+        Debug.Log(forwardAmount.ToString() + " " + turnAmount.ToString());
+        this.SetInputs(forwardAmount, turnAmount);
     }
 
     public void SetTargetPosition(Vector3 targetPosition) {
