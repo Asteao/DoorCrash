@@ -7,8 +7,6 @@ public class CarControls : MonoBehaviour
     public WheelCollider WheelRL;
     public WheelCollider WheelRR;
 
-    public ThrowFoodController tfc;
-
     public Transform WheelFLtrans;
     public Transform WheelFRtrans;
     public Transform WheelRLtrans;
@@ -73,11 +71,6 @@ public class CarControls : MonoBehaviour
     }
     protected void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            tfc.ThrowFood(transform, rb.velocity);
-        }
-
         //for tyre rotate
         // WheelFLtrans.Rotate(WheelFL.rpm / 60 * 360 * Time.deltaTime, 0, 0);
         // WheelFRtrans.Rotate(WheelFR.rpm / 60 * 360 * Time.deltaTime, 0, 0);
