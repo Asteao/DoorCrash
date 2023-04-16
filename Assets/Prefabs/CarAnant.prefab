@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 7283569268012950562}
   - component: {fileID: 7279262636245451100}
   - component: {fileID: 7279262636245451097}
-  - component: {fileID: 7279262636245451101}
+  - component: {fileID: 8952722430810967453}
   m_Layer: 0
   m_Name: CarAnant
   m_TagString: Untagged
@@ -183,7 +183,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9231669, y: 0.602956, z: 1.7726289}
   m_Center: {x: -0.004693866, y: 0.29396746, z: 0.07102305}
---- !u!114 &7279262636245451101
+--- !u!114 &8952722430810967453
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,19 +192,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 7278093143778062482}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d744aceac3a0241ce868ddb1815351d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 75df41d2007f57e91a41870c4f41955b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   WheelFL: {fileID: 7279262635184166280}
   WheelFR: {fileID: 7279262636452508186}
   WheelRL: {fileID: 7279262634824286439}
   WheelRR: {fileID: 7279262635037848100}
+  tfc: {fileID: 0}
   WheelFLtrans: {fileID: 0}
   WheelFRtrans: {fileID: 0}
   WheelRLtrans: {fileID: 0}
   WheelRRtrans: {fileID: 0}
   eulertest: {x: 0, y: 0, z: 0}
+  maxFwdSpeed: -8000
+  maxBwdSpeed: 5000
+  maxBrakeTorque: 5000
   centreofmass: {fileID: 7279262634988647806}
+  speed: 0
 --- !u!1 &7278165607378633128
 GameObject:
   m_ObjectHideFlags: 0
