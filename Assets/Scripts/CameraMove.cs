@@ -15,7 +15,7 @@ public class CameraMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-         locationOffset = new Vector3(0, 2.5f, -7);
+         locationOffset = new Vector3(0, 1.5f, -4);
          target = GameObject.Find("Player").transform;
     }
 
