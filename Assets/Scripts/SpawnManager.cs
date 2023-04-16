@@ -13,6 +13,7 @@ public class SpawnManager : MonoBehaviour
 
     [SerializeField] GameObject[] foodSpawnLocations;
     public GameObject foodOrder;
+    public GameObject newOrder;
 
     private void OnEnable()
     {
@@ -28,6 +29,7 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         
+            Instantiate(newOrder, this.transform);
     }
 
     // Update is called once per frame
