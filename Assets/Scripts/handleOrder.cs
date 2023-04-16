@@ -8,7 +8,7 @@ public class handleOrder : MonoBehaviour
     public static event Action OnAcceptOrder;
     
     public GameObject smallOrder;
-    public GameObject canvas;
+    private GameObject canvas;
     // Start is called before the first frame update
     void Start()
     {

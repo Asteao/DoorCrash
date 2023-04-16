@@ -14,6 +14,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] GameObject[] foodSpawnLocations;
     public GameObject foodOrder;
     public GameObject newOrder;
+    public Canvas myCanvas;
 
     private void OnEnable()
     {
@@ -29,7 +30,8 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         
-            Instantiate(newOrder, this.transform);
+            
+            GameObject orderForm = Instantiate(newOrder, myCanvas.transform);
             PlayerSpawnPoints = GameObject.FindGameObjectsWithTag("Player Spawn");
             EnemySpawnPoints = GameObject.FindGameObjectsWithTag("Enemy Spawn");
             foodSpawnLocations = GameObject.FindGameObjectsWithTag("FoodSpawnPoint");
