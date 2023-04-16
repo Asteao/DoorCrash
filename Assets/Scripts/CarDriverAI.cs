@@ -63,7 +63,7 @@ public class CarDriverAI : CarControls {
             turnAmount = 0f;
         }
 
-        Debug.Log(forwardAmount.ToString() + " " + turnAmount.ToString());
+        // Debug.Log("AI Input: " + forwardAmount.ToString() + " " + turnAmount.ToString());
         this.SetInputs(forwardAmount, turnAmount);
     }
 
